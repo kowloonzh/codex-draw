@@ -19,6 +19,7 @@ argument-hint: <画面描述> [输出路径] [参考图...]
 - `-o` 输出路径（可选）。默认 `./codex-draw-<时间戳>.png`。
 - `-i` 参考图（可选，可多次）。传入后为基于参考图编辑/改图。
 - 单张约 1 分钟，Bash 调用时把 timeout 设为 600000。
+- 默认用轻量模型 `gpt-6-luna` + `low` 推理，并跳过用户 config（MCP/插件）以省 token；可用环境变量 `CODEX_DRAW_MODEL`、`CODEX_DRAW_EFFORT` 覆盖。
 
 ## 流程
 
